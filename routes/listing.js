@@ -22,6 +22,9 @@ router.route("/:id")
 .put(isLoggedIn,isOwner,upload.single("listing[image]"),validateListing,wrapAsync(listingController.updateListing))
 .delete(isLoggedIn,isOwner,wrapAsync(listingController.destroyListing));
 
+
+//search route 
+
   
 //edit route
 
