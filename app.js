@@ -94,8 +94,8 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
 // Routers
-app.use("/listings", listingRouter);
-app.use("/listings/:id/reviews", reviewRouter);
+app.use("/", listingRouter);
+app.use("/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
 // 404 error handler
